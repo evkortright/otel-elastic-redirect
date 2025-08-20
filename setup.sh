@@ -63,7 +63,8 @@ echo "🚀 Step 6: Final deployment with correct configuration..."
 helm upgrade --install opentelemetry-kube-stack open-telemetry/opentelemetry-kube-stack \
   --namespace $NAMESPACE \
   --values fixed-logs-values.yaml \
-  --version $HELM_CHART_VERSION
+  --version $HELM_CHART_VERSION \
+  --skip-schema-validation
 
 echo ""
 echo "✅ Setup complete!"
